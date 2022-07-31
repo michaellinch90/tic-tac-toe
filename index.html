@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="CSS/script.css">
+    <script src="JS/script.js"></script>
+</head>
+<body>
+    <section>
+        <div class="gameBoard">
+        <h1 class="title">Tic Tac Toe</h1>
+        <h2 class="checkpoint"></h2>
+        <div class="boxes">
+            <div id="box1" class="square" onclick="handleSquareClick('1')"></div>
+            <div id="box2" class="square" onclick="handleSquareClick('2')"></div>
+            <div id="box3" class="square" onclick="handleSquareClick('3')"></div>
+            <div id="box4" class="square" onclick="handleSquareClick('4')"></div>
+            <div id="box5" class="square" onclick="handleSquareClick('5')"></div>
+            <div id="box6" class="square" onclick="handleSquareClick('6')"></div>
+            <div id="box7" class="square" onclick="handleSquareClick('7')"></div>
+            <div id="box8" class="square" onclick="handleSquareClick('8')"></div>
+            <div id="box9" class="square" onclick="handleSquareClick('9')"></div>
+        </div>
+    </div>
+        <button class="game--restart" onclick="reloadGame()">Restart Game</button>
+    </section>
+
+</body>
+</html>

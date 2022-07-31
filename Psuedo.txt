@@ -1,0 +1,17 @@
+create HTML main
+create 3x3 box
+create player //clicks
+player onClick box
+    O appears
+player onclick box 
+    x appears
+repeat 4 and 5 until 3 x's or 3 o's in a row
+    if 3 o's 
+        prompt "O wins" 
+    if 3 x' 
+        promt 'X wins' 
+    Else that does not happen 
+        prompt tie game
+end game
+reload
+
