@@ -11,7 +11,16 @@ const players = {
         symbol: 'O'
     }
 };
-
+const winningCombos = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ];
 
 startGame();
 
@@ -24,13 +33,13 @@ function startGame() {
 
 
 function handleSquareClick(boxNumber) {
-    let index = parseInt(boxNumber) - 1;
+    let index = parseInt(boxNumber) - 1;//changes box 1 to 0 to fit into array
     if (winner != null) {
         alert('Game Over Please Reset')//check if someone has won
-    } else if(selections[index] === 0) {
+    } else if(selections[index] === 0) {//does not allow double click
         selections[index] = currentPlayer;//click inserts index in selections array
         console.log(selections)
-        let box = 'box' + boxNumber //verify which box is being clicked
+        let box = 'box' + boxNumber //check which box is clicked
         console.log(box)
         document.getElementById(box).innerHTML = players[currentPlayer.toString()].symbol
         checkWinner();//places symbol in box
@@ -64,7 +73,7 @@ function checkWinner() {
 
     })
     if(!selections.includes(0) && winner == null) {
-        document.querySelector('h2').innerHTML =  'Tie Game'
+        document.querySelector('h2').innerHTML =  'Tie Game'//if no 0's in selections array and no winner = tie
     }
 
 }
@@ -72,16 +81,7 @@ function reloadGame(){
     location.reload();
 }
 
-const winningCombos = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-  ];
+
 
 
 //box1.addEventListener('click', whatever fx)
